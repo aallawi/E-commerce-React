@@ -1,0 +1,88 @@
+.services_section {
+    margin: 0 auto;
+}
+
+.services_content {
+    display: grid;
+    grid-template-columns: repeat( auto-fill , minmax(230px ,1fr));
+    gap: 10px;
+    margin: 2.5rem 1rem;
+}
+
+.services_item {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 10px;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: all ease 300ms;
+}
+.services_item:hover {
+    box-shadow: 0 26px 58px 0 rgba(0, 0, 0, .22), 0 5px 14px 0 rgba(0, 0, 0, .18);
+}
+.services_item span {
+    width: 35px;
+    height: 35px;
+    background-color: var(--head-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    margin: auto 5px;
+    transition: all ease-out 300ms;
+
+}
+.services_item span i{
+    font-size: 25px;
+    color: #fff;
+    transition: all ease-out 300ms;
+}
+.services_item div h3 {
+    font-size: 18px;
+}
+.services_item div p {
+    font-size: 14px;
+    margin: 0;
+    padding: 0;
+}
+
+/* { ============ media Query =============} */
+
+@media screen and (min-width : 1200px) {
+    .services_section {
+        max-width: 1100px;
+    }
+}
+ 
+@media screen and (max-width : 768px) {
+    .services_content {
+        gap: 8px;
+        margin: 0.6rem;
+    }
+    .services_content .services_item {
+        padding: 8px;
+    }
+    .services_content .services_item div h3{
+        font-size: 14px;
+        margin: 0;
+    }
+    .services_content .services_item div p{
+        font-size: 12px;
+        margin: 0;
+    }
+} 
+@media screen and (max-width : 500px) {
+    /* .services_item span {
+        width: 25px;
+        height: 25px;
+    } */
+    .services_item div h3 {
+        font-size: 18px;
+    }
+    .services_item div p {
+        font-size: 14px;
+        margin: 0;
+    }
+} 

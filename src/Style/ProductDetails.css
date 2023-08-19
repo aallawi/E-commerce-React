@@ -1,0 +1,221 @@
+/* .product_details {} */
+.product_photo_name {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    padding: 2rem;
+}
+.product_photo_name > * {
+    flex: 1;
+}
+.product_photo_name .Product_photo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.product_photo_name .Product_photo div {
+    max-width: 400px;
+}
+.product_photo_name .product_photo div img {
+    width: 100%;
+}
+
+
+
+/* ===========================   ( photo and name )  ========================== */
+/* .product_photo_name .product_name {} */
+.product_photo_name .product_name h2 {
+    font-size: 28px;
+}
+.product_photo_name .product_name .rating {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 2rem;
+}
+.product_photo_name .product_name .rating .avg_rating span.num{
+    color: var(--head-color);
+    font-size: 18px;
+}
+.product_photo_name .product_name .rating .avg_rating span.text{
+    color: #777;
+    margin-left: 10px;
+    font-size: 18px;
+}
+
+
+.product_price_category {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 2rem;
+    padding: 15px 0;
+}
+.product_price_category .price {
+    font-weight: 600;
+    width: 95px;
+}
+.product_price_category .category {
+    color: #454545;
+    font-size: 18px;
+}
+.product_des {
+    font-size: 18px;
+    line-height: 25px;
+    color: #777;
+    padding: 10px 0;
+}
+
+
+
+/* ========================  ( description and reviews )   ======================== */
+.product_description_reviews {
+    margin: 2rem;
+}
+.product_description_reviews .head_h6 {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 1rem;
+    user-select: none;
+}
+.product_description_reviews h6 {
+    cursor: pointer;
+    padding: 10px 20px;
+    border-radius: 6px;
+}
+.active_tab {
+    color: var(--head-color);
+    font-weight: 600;
+    background-color: #57e32c;
+    color: #fff;
+}
+.not_active {
+    color: #bbbbbb;  
+}
+
+
+/* ======================== ( description )  ======================== */
+.h6_description {
+    font-size: 18px;
+    color: #777;
+    line-height: 26px;
+    padding: 2rem 0;
+}
+
+
+/* ========================  ( reviews )  ======================== */
+.h6_reviews .review {
+    margin: 2rem 0;
+}
+.h6_reviews .review .name {
+    font-size: 17px;
+    font-weight: 500;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+}
+.h6_reviews .review .name span img {
+    width: 40px;
+    margin-right: 12px;
+}
+.h6_reviews .review .star {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 1rem;
+    color: var(--head-color);
+    font-size: 16px;
+}
+.h6_reviews .review .obinion {
+    font-size: 18px;
+    color: #777;
+    margin-top: 10px;
+}
+
+
+/* ===========================  form  =========================== */
+.form_opinion h4 {
+    font-size: 26px;
+}
+.form {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+.form div input ,
+.form div textarea{
+    width: 600px;
+    margin: 10px 0;
+    font-size: 16px;
+    padding: 10px;
+    outline: none;
+    border: 1px solid var(--head-color);
+}
+
+.assessment {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+.assessment span{
+    font-size: 16px;
+}
+.assessment span:last-child{
+    margin-bottom: 4px;
+}
+
+
+/* ===========================  also like  =========================== */
+.also_like {
+    background-color: #ececec;
+}
+.also_like h6{
+    font-size: 26px;
+    padding: 2rem 0 0 2rem;
+    margin: 0;
+}
+
+
+/* ===========================  media Query  =========================== */
+@media screen and (max-width : 768px) {
+    .product_photo_name {
+        flex-direction: column;
+        padding: 1rem 2rem;
+        gap: 1rem;
+    }
+    .product_photo_name .product_name h2 {
+        font-size: 22px;
+    }
+    .product_des {
+        font-size: 16px;
+        line-height: 22px;
+    }
+    .product_photo_name .product_name .rating .avg_rating span.num{
+        font-size: 16px;
+    }
+    .product_photo_name .product_name .rating .avg_rating span.text{
+        color: #777;
+        margin-left: 5px;
+        font-size: 16px;
+    }
+    .product_description_reviews h6 {
+        font-size: 18px;
+        padding: 6px 18px;
+    }
+    form {
+        width: 100%;
+    }
+    .form_opinion h4 {
+        font-size: 20px;
+        font-weight: 600;
+    }
+    .form div input ,
+    .form div textarea{
+        width: 100%;
+        margin: 7px 0;
+        font-size: 14px;
+        padding: 7px;
+    }
+}

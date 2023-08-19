@@ -1,0 +1,51 @@
+.checkout {
+    padding: 2rem;
+}
+.checkout h2 {
+    font-size: 20px;
+    font-weight: 700;
+    margin: 1rem 0;
+}
+.checkout .form_grop input {
+    outline: none;
+    border: 1px solid #cecece;
+    padding: 5px 10px;
+    border-radius: 5px;
+    width: 100%;
+}
+
+
+
+.checkout_total {
+    background-color: var(--head-color);
+    color: #fff;
+    padding: 12px;
+    border-radius: 6px;
+    margin-top: 3rem;
+}
+.checkout_total h6 , h4 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 20px;
+}
+.checkout_total h6 {
+    margin-bottom: 1rem;
+}
+.checkout_total h4 {
+    font-size: 22px;
+    border-top: 1px solid #fff;
+    padding-top: 1rem;
+}
+.button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+@media screen and (max-width : 991px) {
+    .checkout_total {
+        margin-top: 1rem;
+    }
+}

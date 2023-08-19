@@ -1,0 +1,45 @@
+section.register {
+    margin: 4rem auto;
+    text-align: center;
+}
+
+.box {
+    background-color: var(--head-color);
+    margin: 2rem auto;
+    border-radius: 6px;
+    padding: 2rem ;
+}
+
+.form_grop input {
+    outline: none;
+    border: 1px solid #cecece;
+    padding: 5px 10px;
+    border-radius: 5px;
+    width: 100%;
+
+}
+
+.reg_btn {
+    outline: none;
+    border: none;
+    background-color: #fff;
+    color: var(--head-color);
+    border-radius: 6px;
+    padding: 5px 25px;
+    font-weight: 600;
+    width: fit-content;
+    margin-top: 1rem;
+}
+
+p {
+    margin: 0 !important;
+    padding-top: 12px;
+}
+p a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: 600;
+}
+p a:hover {
+    color: #c9c9c9;
+}
