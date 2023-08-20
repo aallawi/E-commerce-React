@@ -55,7 +55,7 @@ const Clock = () => {
   return (
     <div className="clock">
       <div className="clock_content">
-        <p className="limited">Up to 50% Off</p>
+        <div className="limited">Up to 50% Off</div>
         <div className="quality">
           {productName}
           <div className="quality">

@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { NavLink } from "react-router-dom";
 import "../Style/Home.css";
-import HomeVideo1 from "../assets/images/HomeVideo1.mp4";
+import homeImg from "../assets/images/home.png";
 import Services from "../conponent/UI/Services/Services";
 import Clock from "../conponent/UI/Clock/Clock";
 import products from "../assets/data/products";
@@ -39,9 +39,7 @@ export const Home = () => {
     <section id="home">
       <div className="home">
         <div className="home_overlay">
-          <video autoPlay loop muted>
-            <source src={HomeVideo1} type="video/mp4" />
-          </video>
+          <img src={homeImg} alt="Modern Furniture" />
 
           <div className="home_content">
             <div className="home_content_text">
@@ -49,35 +47,32 @@ export const Home = () => {
                 We offer modern home furnishings & decor <br />
                 featuring inspiring designs and colors.
               </h1>
-              <p>
+              <div className="par">
                 <span className="name_company">Modern Furniture</span> sets
                 provide a quick, easy way to make sure you get everything you
                 really need in a nice, coordinated way. You spend less time
                 choosing and more time enjoying your new furniture. Here you’ll
                 find value for money options for many areas of your home, from
                 bedrooms to gardens.
-              </p>
-              <button className="buy_btn">
+              </div>
+              <button className="buy_btn_home">
                 <NavLink to="/shop">Shop Now</NavLink>
               </button>
             </div>
           </div>
         </div>
-        <Services />
-        <ProductList
-          data={trend_Product}
-          type={"Trending Products"}
-          id={"chair"}
-        />
-        <ProductList data={best_Product} type={"Best Sales"} id={"sofa"} />
-        <Clock />
-        <ProductList
-          data={new_Arrivals}
-          type={"All New Arrivals"}
-          id={"chair"}
-        />
-        <ProductList data={watch_Product} type={"Watches"} id={"watches"} />
       </div>
+
+      <Services />
+      <ProductList
+        data={trend_Product}
+        type={"Trending Products"}
+        id={"chair"}
+      />
+      <ProductList data={best_Product} type={"Best Sales"} id={"sofa"} />
+      <Clock />
+      <ProductList data={new_Arrivals} type={"All New Arrivals"} id={"chair"} />
+      <ProductList data={watch_Product} type={"Watches"} id={"watches"} />
     </section>
   );
 };

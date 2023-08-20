@@ -13,6 +13,9 @@
     text-align: center;
     font-size: 30px;
 }
+.no-item button {
+    width: 100%;
+} 
 
 
 /* ==================== All item ==================== */
@@ -37,23 +40,29 @@ table thead tr th {
     text-align: center;
     color: var(--head-color);
     background-color: #e4e4e4;
-
+    font-weight: 500;
 }
 
 
 table tbody {
     border-bottom: 1px solid #d0d0d0;
+    height: 90px;
+    max-height: 100px;
 }
 table tbody tr td {
-    padding: 0 5px;
     text-align: center;
     font-weight: 600;
+    max-height: 100px;
 }
 table tbody tr td img {
     max-width: 100px;
+    max-height: 100px;
 }
 table tbody tr td.no {
     color: var(--head-color); 
+}
+table tbody tr td.name {
+    padding: 0 15px;
 }
 table tbody tr td.name a {
     cursor: pointer;
@@ -83,7 +92,7 @@ table tbody tr td.delete i {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 2rem;
+    gap: 1rem;
 }
 
 
@@ -95,26 +104,17 @@ table tbody tr td.delete i {
 }
 @media screen and (max-width : 768px) {
     .cart {
-        padding: 2rem 1rem;
+        padding: 2rem 0.3rem;
     }
     table thead tr th {
         font-size: 16px;
     }
     table tbody tr td {
-        font-size: 16px;
-    }
-    table tbody tr td img {
-        max-width: 90px;
+        font-size: 18px;
     }
 }
 @media screen and (max-width : 550px) {
-    table thead tr th {
-        font-size: 14px;
-    }
     table tbody tr td {
-        font-size: 12px;
-    }
-    table tbody tr td img {
-        max-width: 70px;
+        font-size: 16px;
     }
 }

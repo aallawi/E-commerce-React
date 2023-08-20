@@ -161,7 +161,7 @@ button.visit a {
     }
     .clock_content .limited {
         font-size: 18px;
-        margin-bottom: 16px;
+        margin: 1rem auto;
     }
     .clock_content .quality {
         font-size: 20px;

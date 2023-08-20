@@ -9,7 +9,7 @@ import { toast } from "react-toastify";
 const ProductItem = ({ item }) => {
   const { productId } = useParams();
   useEffect(() => {
-    window.scrollTo(0, 60);
+    window.scrollTo(0, 0);
   }, [productId]);
 
   const dispatch = useDispatch();

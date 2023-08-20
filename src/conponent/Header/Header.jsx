@@ -98,29 +98,35 @@ export const Header = () => {
         {/* Menu Mobile */}
         <div>
           {isMenuOpen ? (
-            <div className="mobile_overlay">
-              <div className="section_menu">
+            <div>
+              <div className="mobile_overlay">
+                <div className="section_menu">
+                  <div
+                    className="close"
+                    onClick={() => setIsMenuOpen(!isMenuOpen)}
+                  >
+                    <span>
+                      <i className="ri-close-fill"></i>
+                    </span>
+                  </div>
+                  <div className="overlay_menu">
+                    <ul>
+                      <li onClick={() => setIsMenuOpen(!isMenuOpen)}>
+                        <NavLink to="/">Home</NavLink>
+                      </li>
+                      <li onClick={() => setIsMenuOpen(!isMenuOpen)}>
+                        <NavLink to="shop">Shop</NavLink>
+                      </li>
+                      <li onClick={() => setIsMenuOpen(!isMenuOpen)}>
+                        <NavLink to="cart">Cart</NavLink>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
                 <div
-                  className="close"
+                  className="complete"
                   onClick={() => setIsMenuOpen(!isMenuOpen)}
-                >
-                  <span>
-                    <i className="ri-close-fill"></i>
-                  </span>
-                </div>
-                <div className="overlay_menu">
-                  <ul>
-                    <li onClick={() => setIsMenuOpen(!isMenuOpen)}>
-                      <NavLink to="/">Home</NavLink>
-                    </li>
-                    <li onClick={() => setIsMenuOpen(!isMenuOpen)}>
-                      <NavLink to="shop">Shop</NavLink>
-                    </li>
-                    <li onClick={() => setIsMenuOpen(!isMenuOpen)}>
-                      <NavLink to="cart">Cart</NavLink>
-                    </li>
-                  </ul>
-                </div>
+                ></div>
               </div>
             </div>
           ) : (

@@ -109,11 +109,11 @@ export const ProductDetails = () => {
             </div>
             <div className="product_des">{shortDesc}</div>
             <motion.button
-              className="buy_btn"
+              className="btn_addToCart"
               whileTap={{ scale: 1.2 }}
               onClick={addToCart}
             >
-              Add To Cart
+              Add To Cart <i className="ri-shopping-cart-line"></i>
             </motion.button>
           </div>
         </div>
