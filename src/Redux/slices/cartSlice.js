@@ -1,9 +1,22 @@
 import { createSlice } from "@reduxjs/toolkit";
 
+const items =
+  localStorage.getItem("cart_Items") !== null
+    ? JSON.parse(localStorage.getItem("cart_Items"))
+    : [];
+const total_Amount =
+  localStorage.getItem("total_Amount") !== null
+    ? JSON.parse(localStorage.getItem("total_Amount"))
+    : 0;
+const total_Quantity =
+  localStorage.getItem("total_Quantity") !== null
+    ? JSON.parse(localStorage.getItem("total_Quantity"))
+    : 0;
+
 const initialState = {
-  cart_Items: [],
-  total_Amount: 0,
-  total_Quantity: 0,
+  cart_Items: items,
+  total_Amount: total_Amount,
+  total_Quantity: total_Quantity,
 };
 
 const cartSlice = createSlice({
@@ -38,6 +51,17 @@ const cartSlice = createSlice({
         0
       );
 
+      localStorage.setItem(
+        "cart_Items",
+        JSON.stringify(state.cart_Items.map((item) => item))
+      );
+      localStorage.setItem("total_Amount", JSON.stringify(state.total_Amount));
+      localStorage.setItem(
+        "total_Quantity",
+        JSON.stringify(state.total_Quantity)
+      );
+
+      // console.log("-------------------------");
       // console.log(state.total_Amount);
       // console.log(state.total_Quantity);
       // console.log(new_Item);
@@ -54,6 +78,16 @@ const cartSlice = createSlice({
       state.total_Amount = state.cart_Items.reduce(
         (total, item) => total + Number(item.price) * Number(item.quantity),
         0
+      );
+
+      localStorage.setItem(
+        "cart_Items",
+        JSON.stringify(state.cart_Items.map((item) => item))
+      );
+      localStorage.setItem("total_Amount", JSON.stringify(state.total_Amount));
+      localStorage.setItem(
+        "total_Quantity",
+        JSON.stringify(state.total_Quantity)
       );
     },
   },
