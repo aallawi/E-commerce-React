@@ -49,3 +49,12 @@
         margin-top: 1rem;
     }
 }
+@media screen and (max-width : 450px) {
+    .button {
+        flex-direction: column;
+        gap: 0;
+    }
+    .button .buy_btn{
+        width: 100%;
+    }
+}

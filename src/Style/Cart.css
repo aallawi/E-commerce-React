@@ -83,7 +83,7 @@ table tbody tr td.quantity span svg  {
 
 table tbody tr td.delete {
     color: red;
-    min-width: 60px;
+    min-width: 35px;
 }
 table tbody tr td.delete i {
     cursor: pointer;
@@ -115,7 +115,7 @@ table tbody tr td.delete i {
 }
 @media screen and (max-width : 768px) {
     .cart {
-        padding: 2rem 0.3rem;
+        padding: 2rem 0;
     }
     table thead tr th {
         font-size: 16px;
@@ -127,7 +127,7 @@ table tbody tr td.delete i {
 
 @media screen and (max-width : 640px) {
     table tbody tr td {
-        font-size: 16px;
+        font-size: 15px;
     }
     table tbody tr td img {
         max-width: 80px;
