@@ -6,6 +6,15 @@ import { NavLink, useNavigate } from "react-router-dom";
 import { motion } from "framer-motion";
 import { cartActions } from "../Redux/slices/cartSlice";
 import { useDispatch, useSelector } from "react-redux";
+import { toast } from "react-toastify";
+import {
+  // AiFillPlusCircle,
+  // AiFillMinusCircle,
+  // AiOutlinePlusSquare,
+  // AiOutlineMinusSquare,
+  AiOutlineMinusCircle,
+  AiOutlinePlusCircle,
+} from "react-icons/ai";
 
 export const Cart = () => {
   const cart_Items = useSelector((state) => state.cart.cart_Items);
@@ -13,6 +22,28 @@ export const Cart = () => {
 
   const navigate = useNavigate();
   const dispatch = useDispatch();
+
+  const handelIncrementItem = (item) => {
+    dispatch(
+      cartActions.addItem({
+        id: item.id,
+        productName: item.productName,
+        price: item.price,
+        imgUrl: item.imgUrl,
+      })
+    );
+    toast.success("An item was successfully incremented");
+  };
+
+  const handelDecreaseItem = (item) => {
+    dispatch(cartActions.removeOne(item.id));
+    toast.success("An item was successfully decreased");
+  };
+
+  const handelDeleteItem = (item) => {
+    dispatch(cartActions.deleteItem(item.id));
+    toast.success("The product has been removed from the cart");
+  };
 
   return (
     <section>
@@ -54,13 +85,19 @@ export const Cart = () => {
                         </NavLink>
                       </td>
                       <td>${item.price}</td>
-                      <td>{item.quantity}</td>
+                      <td className="quantity">
+                        <span onClick={() => handelIncrementItem(item)}>
+                          <AiOutlinePlusCircle />
+                        </span>
+                        <span>{item.quantity}</span>
+                        <span onClick={() => handelDecreaseItem(item)}>
+                          <AiOutlineMinusCircle />
+                        </span>
+                      </td>
                       <td className="delete">
                         <motion.i
                           whileTap={{ scale: 4 }}
-                          onClick={() =>
-                            dispatch(cartActions.deleteItem(item.id))
-                          }
+                          onClick={() => handelDeleteItem(item)}
                           className="ri-delete-bin-6-line"
                         ></motion.i>
                       </td>

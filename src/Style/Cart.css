@@ -69,6 +69,27 @@ table tbody tr td.name a {
     text-decoration: none;
     color: #333;
 }
+
+table tbody tr td.quantity {
+    padding: 0 10px;
+    min-width: 100px;
+}
+table tbody tr td.quantity span:nth-child(2) {
+    padding: 0 10px;
+}
+table tbody tr td.quantity span svg  {
+    font-size: 30px;
+    cursor: pointer;
+}
+@media screen and (max-width : 640px) {
+    table tbody tr td.quantity span:nth-child(2) {
+        padding: 0 5px;
+    }
+    table tbody tr td.quantity span svg  {
+        font-size: 24px;
+    }
+}
+
 table tbody tr td.delete {
     color: red;
 }
