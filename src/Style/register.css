@@ -1,6 +1,12 @@
 section.register {
-    margin: 4rem auto;
+    padding: 6rem 0 4rem;
     text-align: center;
+    background-color: #6a645c;
+}
+@media screen and (max-width : 767px) {
+    section.register {
+        padding: 4rem 0;
+    }
 }
 
 .box {
@@ -12,11 +18,14 @@ section.register {
 
 .form_grop input {
     outline: none;
-    border: 1px solid #cecece;
+    border: 2px solid #fff;
     padding: 5px 10px;
     border-radius: 5px;
     width: 100%;
-
+    box-sizing: border-box;
+}
+.form_grop input:focus {
+    border: 2px solid blue;
 }
 
 .reg_btn {
